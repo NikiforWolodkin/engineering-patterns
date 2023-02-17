@@ -1,3 +1,6 @@
 ﻿using Lab_2;
 
-Organization org = new Organization();
+Organization organization = new Organization();
+University university = new University();
+
+
