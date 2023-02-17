@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Lab_0
 {
-    public class Polymorphism
+    public class Math
     {
         public static int Add(int number1, int number2)
         {
@@ -21,6 +21,40 @@ namespace Lab_0
         public static string Add(string string1, string string2)
         {
             return $"{string1} {string2}";
+        }
+    }
+
+    public class Shape
+    {
+        public virtual void DrawShape() { }
+    }
+
+    public class Triangle : Shape
+    { 
+        public override void DrawShape()
+        {
+            Console.WriteLine(" # ");
+            Console.WriteLine("###");
+        }
+    }
+
+    public class Square : Shape
+    {
+        public override void DrawShape()
+        {
+            Console.WriteLine("###");
+            Console.WriteLine("# #");
+            Console.WriteLine("###");
+        }
+    }
+
+    public class Star : Shape
+    {
+        public override void DrawShape()
+        {
+            Console.WriteLine(" # ");
+            Console.WriteLine("# #");
+            Console.WriteLine(" # ");
         }
     }
 }
