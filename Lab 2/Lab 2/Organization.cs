@@ -93,7 +93,7 @@ namespace Lab_2
 
         public bool CloseJobVacancy(int index)
         {
-            if (index < 0 || index >= Vacancies.Count - 1)
+            if (index < 0 || index > Vacancies.Count - 1)
             {
                 return false;
             }
@@ -112,7 +112,7 @@ namespace Lab_2
 
         public bool DeleteJobTitle(int index)
         {
-            if (index < 0 || index >= Titles.Count - 1)
+            if (index < 0 || index > Titles.Count - 1)
             {
                 return false;
             }
@@ -133,7 +133,7 @@ namespace Lab_2
 
         public bool Dismiss(int index, string reason)
         {
-            if (index < 0 || index >= Employees.Count - 1)
+            if (index < 0 || index > Employees.Count - 1)
             {
                 return false;
             }
