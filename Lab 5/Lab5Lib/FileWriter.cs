@@ -2,22 +2,22 @@
 {
     public class FileWriter : IWriter
     {
-        private string _filename;
-        public string Filename 
+        private string _fileName;
+        public string FileName 
         { 
-            get { return _filename; } 
+            get { return _fileName; } 
         }
 
         public FileWriter(string? filename = null)
         {
-            _filename = filename ?? Constant.Filename;
+            _fileName = filename ?? Constant.FileName;
         }
 
         public string? Save(string? message)
         {
-            File.WriteAllText(Filename, message);
+            File.WriteAllText(FileName, message);
 
-            return Filename;
+            return FileName;
         }
     }
 }
