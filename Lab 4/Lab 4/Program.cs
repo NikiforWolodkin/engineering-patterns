@@ -33,8 +33,7 @@ logger3.Stop();
 var logs = Directory
     .GetFiles("../../../")
     .Where(log => log.Contains("LOG"))
-    .OrderByDescending(log => log)
-    .ToList();
+    .OrderByDescending(log => log);
 
-Console.WriteLine(logs[0]);
-Console.WriteLine(File.ReadAllText(logs[0]));
+Console.WriteLine(logs.First());
+Console.WriteLine(File.ReadAllText(logs.First()));
